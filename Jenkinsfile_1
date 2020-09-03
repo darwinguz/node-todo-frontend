@@ -1,8 +1,7 @@
-//Jenkins file only to tutorial example
 pipeline {
   agent any
     
-  tools {nodejs "node"}
+  tools {nodejs "nodejs12"}
     
   stages {
         
@@ -12,7 +11,7 @@ pipeline {
       }
     }
         
-    stage('Install dependencies') {
+    stage('Build') {
       steps {
         sh 'npm install'
       }
